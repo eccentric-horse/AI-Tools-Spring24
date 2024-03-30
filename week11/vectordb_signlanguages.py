@@ -4,7 +4,7 @@ import os
 
 # Create a new database client
 # We want the data to be persisted
-client = chromadb.PersistentClient(path="signlanguagesdb")
+client = chromadb.PersistentClient(path="signlanguagesdb_backup")
 
 collection = client.create_collection(
     'signlanguages',
@@ -15,6 +15,7 @@ collection = client.create_collection(
 
 filepath = '../signlanguages'
 
+# Load the signlanguages files to the database we just initiated
 for f in os.listdir(filepath):
     path = os.path.join(filepath, f)
     with open(path, 'r', encoding="utf8", errors='ignore') as f:
