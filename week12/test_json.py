@@ -32,6 +32,7 @@ def schedule_meeting(subject, recipients, time):
     return {'success': True}
 
 
+# Note: when using JSON for function calls, use this API
 def process_function_call(function_call):
     name = function_call.name
     args = json.loads(function_call.arguments)

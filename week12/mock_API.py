@@ -20,6 +20,10 @@ def get_emails(names):
 
     return emails
 
+# ['Kirk', 'Spock', 'Picard']
+# get_emails(['Kirk', 'Spock', 'Picard'])
+
+#['kirk@example.com', 'spock@example.com']
 
 def schedule_meeting(subject, recipients, time):
     print(f"* Meeting '{subject}' scheduled for {time} with {recipients}")
@@ -56,7 +60,7 @@ schedule_meeting(subject, recipient, time)
 print("---------------")
 print()
 
-
+'''
 # Test process_function_call
 print("~Test process_function_call~")
 
@@ -66,6 +70,7 @@ result = process_function_call(function_call)
 
 print(result)
 
+
 print("---------------")
 print()
 
@@ -74,4 +79,3 @@ function_call = json.loads(content_string2)
 result = process_function_call(function_call)
 
 print("---------------")
-'''
