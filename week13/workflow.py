@@ -12,6 +12,9 @@ response = ChatTemplate({
 
 response_json = response.completion({}).choices[0].message.content
 
+print(response_json)
+print('-------')
+
 # Removing triple backticks from the string if present
 response_json = response_json.strip('`')
 

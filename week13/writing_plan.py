@@ -1,6 +1,9 @@
 import sys
-sys.path.append('../')
-
+import os
+# Change working directory so files can 
+# be found when debugging
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append("..")
 from utilities import ChatTemplate
 
 chat = ChatTemplate({
@@ -16,8 +19,8 @@ plan = [
   'Step 7: Revise and edit the novella, ensuring the plot is coherent, the character development is compelling, and the theme of AI ethics is effectively conveyed.'
 ]
 
-for step in plan:
-    chat.template['messages'].append({'role': 'user', 'content': step})
+for whatever in plan:
+    chat.template['messages'].append({'role': 'user', 'content': whatever})
 
     message = chat.completion({}).choices[0].message
     print(message.content)
